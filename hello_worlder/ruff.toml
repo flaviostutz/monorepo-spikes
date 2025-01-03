@@ -1,0 +1,164 @@
+target-version = "py313"
+show-fixes = true
+src = ["src", "tests"]
+unsafe-fixes = false
+cache-dir = ".cache/.ruff_cache"
+
+[lint]
+# https://docs.astral.sh/ruff/rules/
+select = [
+    # DEFAULT RULES
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+
+    # CUSTOM RULES
+    # Warning
+    "W",
+    # mccabe complexity
+    "C90",
+    # pep8-naming
+    "N",
+    # pydocstyle
+    "D",
+    # flake8-async
+    "ASYNC",
+    # flake8-annotations
+    "ANN",
+    # flake8-bandit
+    "S",
+    # flake8-boolean-trap - boolean-positional-value-in-call (FBT003)
+    "FBT003",
+    # flake8-builtins (A)
+    "A",
+    # flake8-commas (COM)
+    "COM",
+    # flake8-comprehensions (C4)
+    "C4",
+    # flake8-datetimez (DTZ)
+    "DTZ",
+    # flake8-debugger (T10)
+    "T10",
+    # flake8-django (DJ)
+    "DJ",
+    # flake8-executable (EXE)
+    "EXE",
+    # flake8-future-annotations (FA)
+    "FA",
+    # flake8-implicit-str-concat (ISC)
+    "ISC",
+    # flake8-import-conventions (ICN)
+    "ICN",
+    # flake8-logging (LOG)
+    "LOG",
+    # flake8-logging-format (G)
+    "G",
+    # flake8-no-pep420 (INP)
+    "INP",
+    # flake8-pie (PIE)
+    "PIE",
+    # flake8-print (T20)
+    "T20",
+    # flake8-pyi (PYI)
+    "PYI",
+    # flake8-pytest-style (PT)
+    "PT",
+    # flake8-quotes (Q)
+    "Q",
+    # flake8-raise (RSE)
+    "RSE",
+    # flake8-return (RET)
+    "RET",
+    # flake8-self (SLF)
+    "SLF",
+    # flake8-type-checking (TC)
+    "TC",
+    # flake8-gettext (INT)
+    "INT",
+    # flake8-unused-arguments (ARG)
+    "ARG",
+    # flake8-use-pathlib (PTH)
+    "PTH",
+    # flake8-todos (TD)
+    "TD",
+    # eradicate (ERA)
+    "ERA",
+    # pandas-vet (PD)
+    "PD",
+    # pygrep-hooks (PGH)
+    "PGH",
+    # Pylint (PL)
+    "PL",
+    # tryceratops (TRY)
+    "TRY",
+    # flynt (FLY)
+    "FLY",
+    # NumPy-specific rules (NPY)
+    "NPY",
+    # FastAPI (FAST)
+    "FAST",
+    # Perflint (PERF)
+    "PERF",
+    # refurb (FURB)
+    "FURB",
+    ## pydoclint (DOC)
+    # "DOC",
+    # Ruff-specific rules (RUF)
+    "RUF"
+]
+
+ignore = [
+    # missing-todo-link
+    "TD003",
+    # tryceratops - raise-vanilla-class
+    "TRY002",
+    # tryceratops - raise-vanilla-args
+    "TRY003",
+    # pydocstyle - undocumented-public-module
+    "D100",
+    # pydocstyle - incorrect-blank-line-before-class (D203)
+    "D203",
+    # pydocstyle - multi-line-summary-second-line (D213)
+    "D213",
+    # pydocstyle - missing-trailing-period (D400)
+    "D400",
+    # missing-terminal-punctuation (D415)
+    "D415",
+
+    # DISABLED TO AVOID CONFLICT WITH FORMATTER
+    # check https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+    "COM812",
+    "ISC001",
+    "W191",
+    "E111",
+    "E114",
+    "E117",
+    "D206",
+    "D300",
+    "Q000",
+    "Q001",
+    "Q002",
+    "Q003",
+    "COM812",
+    "COM819",
+    "ISC001",
+    "ISC002",
+]
+
+[lint.per-file-ignores]
+"tests/*" = ["D", "S101"]
+
+[lint.mccabe]
+max-complexity = 14
+
+[format]
+docstring-code-format = true

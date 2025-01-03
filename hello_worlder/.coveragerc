@@ -1,0 +1,8 @@
+[run]
+branch = True
+omit = **/main.py
+
+[report]
+fail_under = 80
+format = text
+#skip_covered = True

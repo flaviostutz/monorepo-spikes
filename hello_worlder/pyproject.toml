@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta" # If not defined, then legacy behavior can happen.
+
+[project]
+name = "hello_worlder"
+version = "0.0.1"
+description = "Hello worlder is a simple package to print hello world"
+readme = "README.md"
+requires-python = "==3.13.*"
+license = { file = "LICENSE.txt" }
+keywords = ["test"]
+maintainers = [
+  { name = "Test", email = "test@test.com" },
+]
+dependencies = [
+    # jupyter
+    "jupyterlab==4.3.*",
+
+    # visualization of graphs
+    "pyvis==0.3.*",
+    "matplotlib==3.10.*",
+
+    # pandas dependencies
+    "pandas==2.2.*",
+    "pyarrow==18.1.*"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest==8.3.*",
+  "pytest-cov==6.0.*",
+  "ruff==0.8.*",
+  "pip-audit==2.*",
+  "mypy==1.14.*",
+  "pip-tools==7.4.*"
+]

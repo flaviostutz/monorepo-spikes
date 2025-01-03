@@ -1,0 +1,11 @@
+# python related files
+.venv
+build
+*.egg-info
+.pytest*
+__pycache__
+.coverage
+# .ruff_cache
+# .mypy_cache
+# .audit_cache
+.cache
