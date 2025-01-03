@@ -32,6 +32,8 @@ update-lockfile:
 		--output-file=constraints.txt pyproject.toml
 	make build
 
+all: build test lint
+
 # run jupyer locally
 start:
 	$(PYTHON_VENV_PATH)/bin/jupyter lab --port 8888 --NotebookApp.iopub_data_rate_limit=1.0e10
