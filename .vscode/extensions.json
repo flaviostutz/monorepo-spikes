@@ -1,0 +1,15 @@
+{
+    "recommendations": [
+      "lfm.vscode-makefile-term",
+      "ms-vscode.makefile-tools",
+      "humao.rest-client",
+      "antfu.file-nesting",
+      "fill-labs.dependi",
+      "tamasfe.even-better-toml",
+
+      //python
+      "ms-python.python",
+      "ms-python.mypy-type-checker",
+      "charliermarsh.ruff",
+    ]
+}
