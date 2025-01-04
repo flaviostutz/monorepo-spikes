@@ -1,4 +1,4 @@
-# hello_worlder
+# hello_world
 
 This project follows command standards in [common-targets](https://github.com/flaviostutz/common-targets).
 
@@ -21,6 +21,11 @@ make lint
 - pip-tools: dependencies lock file generation (contrainsts.txt)
 
 All the tools are working correctly with Makefile scripts to be used locally or in CI pipelines and also with VSCode plugins (check .vscode/extensions.json for details) to make the findings more visual.
+
+## TODO
+
+- Check monorepo scenarios with UV https://docs.astral.sh/uv and Petry
+  - It's said that UV is much faster for dep management because it's implemented in Rust
 
 ## References
 

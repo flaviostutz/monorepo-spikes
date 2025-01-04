@@ -150,7 +150,7 @@ jupyter-server==2.15.0
 jupyter-server-terminals==0.5.3
     # via jupyter-server
 jupyterlab==4.3.4
-    # via hello_worlder (pyproject.toml)
+    # via hello_world (pyproject.toml)
 jupyterlab-pygments==0.3.0
     # via nbconvert
 jupyterlab-server==2.27.3
@@ -166,7 +166,7 @@ markupsafe==3.0.2
     #   jinja2
     #   nbconvert
 matplotlib==3.10.0
-    # via hello_worlder (pyproject.toml)
+    # via hello_world (pyproject.toml)
 matplotlib-inline==0.1.7
     # via
     #   ipykernel
@@ -178,7 +178,7 @@ mistune==3.1.0
 msgpack==1.1.0
     # via cachecontrol
 mypy==1.14.1
-    # via hello_worlder (pyproject.toml)
+    # via hello_world (pyproject.toml)
 mypy-extensions==1.0.0
     # via mypy
 nbclient==0.10.2
@@ -218,7 +218,7 @@ packaging==24.2
     #   pip-requirements-parser
     #   pytest
 pandas==2.2.3
-    # via hello_worlder (pyproject.toml)
+    # via hello_world (pyproject.toml)
 pandocfilters==1.5.1
     # via nbconvert
 parso==0.8.4
@@ -230,11 +230,11 @@ pillow==11.1.0
 pip-api==0.0.34
     # via pip-audit
 pip-audit==2.7.3
-    # via hello_worlder (pyproject.toml)
+    # via hello_world (pyproject.toml)
 pip-requirements-parser==32.0.1
     # via pip-audit
 pip-tools==7.4.1
-    # via hello_worlder (pyproject.toml)
+    # via hello_world (pyproject.toml)
 platformdirs==4.3.6
     # via jupyter-core
 pluggy==1.5.0
@@ -254,7 +254,7 @@ pure-eval==0.2.3
 py-serializable==1.1.2
     # via cyclonedx-python-lib
 pyarrow==18.1.0
-    # via hello_worlder (pyproject.toml)
+    # via hello_world (pyproject.toml)
 pycparser==2.22
     # via cffi
 pygments==2.18.0
@@ -272,10 +272,10 @@ pyproject-hooks==1.2.0
     #   pip-tools
 pytest==8.3.3
     # via
-    #   hello_worlder (pyproject.toml)
+    #   hello_world (pyproject.toml)
     #   pytest-cov
 pytest-cov==6.0.0
-    # via hello_worlder (pyproject.toml)
+    # via hello_world (pyproject.toml)
 python-dateutil==2.9.0.post0
     # via
     #   arrow
@@ -287,7 +287,7 @@ python-json-logger==3.2.1
 pytz==2024.2
     # via pandas
 pyvis==0.3.2
-    # via hello_worlder (pyproject.toml)
+    # via hello_world (pyproject.toml)
 pyyaml==6.0.2
     # via jupyter-events
 pyzmq==26.2.0
@@ -320,7 +320,7 @@ rpds-py==0.22.3
     #   jsonschema
     #   referencing
 ruff==0.8.5
-    # via hello_worlder (pyproject.toml)
+    # via hello_world (pyproject.toml)
 send2trash==1.8.3
     # via jupyter-server
 six==1.17.0

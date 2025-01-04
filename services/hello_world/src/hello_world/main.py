@@ -1,4 +1,4 @@
 # Import hello module
-from hello_worlder import hello_world
+from hello_world import hello_world
 
 hello_world.hello()
