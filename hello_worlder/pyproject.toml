@@ -26,6 +26,9 @@ dependencies = [
     "pyarrow==18.1.*"
 ]
 
+[tool.setuptools.package-data]
+hello_worlder = ["py.typed"]
+
 [project.optional-dependencies]
 dev = [
   "pytest==8.3.*",
