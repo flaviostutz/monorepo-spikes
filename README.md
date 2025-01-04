@@ -4,9 +4,9 @@ This is a reference Monorepo using a good set of build, lint, test practices for
 
 ## Monorepo features
 
-- Should support multiple languages (NodeJS, Python etc)
+- Support for multiple languages in packages (NodeJS, Python etc)
 
-- Packages are organized in
+- Packages organized in
 
   - /shared - packages that can be reused by services
     - Can group shared resources by folders, such as "/makefiles", "/tools", "/schemas"
