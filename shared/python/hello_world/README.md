@@ -13,7 +13,8 @@ make lint
 
 ## Tools
 - Makefile: scripts management
-- pip: virtual environments management
+- pyenv: Python installation
+- pip: virtual environment management + package manager
 - Mypy: code Type check
 - RUFF: code formatting and linting
 - pytest + coverage: test management
