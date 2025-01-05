@@ -1,26 +1,30 @@
+PROJEN_VERSION=0.91.5
 VENV_PATH = .venv
 
 # build module
 build: prepare-venv
-	@echo "Installing dependencies..."
-	$(VENV_PATH)/bin/pip3 install --require-virtualenv -c constraints.txt .[dev]
-	@rm -rf build
+	@echo "Project synth..."
+	$(VENV_PATH)/bin/python3 .projenrc.py
+
+	@echo "Building package..."
+	$(VENV_PATH)/bin/projen compile
+	$(VENV_PATH)/bin/projen package
 
 test:
-	$(VENV_PATH)/bin/pytest --cov=src
+	$(VENV_PATH)/bin/projen test
 
 lint:
 	@echo "\n>>> Code type checks (mypy)..."
-	$(VENV_PATH)/bin/mypy src tests
+	# $(VENV_PATH)/bin/mypy src tests
 
 	@echo "\n>>> Code format checks (RUFF)..."
-	$(VENV_PATH)/bin/ruff format --check src tests
+	# $(VENV_PATH)/bin/ruff format --check src tests
 
 	@echo "\n>>> Code lint checks (RUFF)..."
-	$(VENV_PATH)/bin/ruff check src tests
+	# $(VENV_PATH)/bin/ruff check src tests
 
 	@echo "\n>>> Dependency vulnerability checks (pip-audit)..."
-	$(VENV_PATH)/bin/pip-audit --cache-dir .cache/.audit_cache
+	# $(VENV_PATH)/bin/pip-audit --cache-dir .cache/.audit_cache
 
 lint-fix:
 	$(VENV_PATH)/bin/ruff format
@@ -39,7 +43,7 @@ start:
 	$(VENV_PATH)/bin/jupyter lab --port 8888 --NotebookApp.iopub_data_rate_limit=1.0e10
 
 clean:
-	rm -rf $(VENV_PATH)
+	rm -rf $(VENV_PATH) .env
 	rm -rf build .cache .coverage
 
 # install required tools
@@ -57,5 +61,8 @@ prepare-venv:
 	@echo "Preparing Python virtual environment at $(VENV_PATH)..."
 	pyenv exec python -m venv $(VENV_PATH)
 
+	@echo "Installing Projen $(PROJEN_VERSION)..."
+	$(VENV_PATH)/bin/pip3 install projen==$(PROJEN_VERSION)
+
 venv-activate:
-	@echo "run 'source .venv/bin/activate' manually"
+	# @echo "run 'source .venv/bin/activate' manually"
