@@ -8,8 +8,7 @@ project = PythonProject(
     version="0.1.0",
     deps=["ruff"],
     dev_deps=["poetry"],
-    github=False,
-    commit_generated=False
+    github=False
 )
 
 project.synth()

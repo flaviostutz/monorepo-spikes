@@ -1,8 +1,6 @@
-# python-some
+# monorepo-spikes
 
-This is a reference Monorepo using a good set of build, lint, test practices for Python projects (will be expanded to other languages later).
-
-Look for a reference Python project at [/shared/libs/hello_world](shared/libs/hello_world/). It has good build, lint and test practices.
+This is a reference polyglot monorepo with a set of spikes on project structures, and also employs tasks such as build, lint, test, inter dependency management with packages using different languages but still keeping sanity for the developers :)
 
 ## Monorepo features
 
@@ -10,17 +8,20 @@ Look for a reference Python project at [/shared/libs/hello_world](shared/libs/he
 
 - Packages are organized in
 
-  - /shared - packages that can be reused by services
+  - /shared - packages with shared resources
     - Can group shared resources by folders, such as "/makefiles", "/tools", "/schemas"
 
-  - /services - packages that can use shared resources
+  - /apps - packages with applications
+    - those packages might use shared resources
+    - they are normally microservices that provides frontend or backend services
     - one service shouldn't depend on each other to avoid confusion
-    - Can have an inner structure if it's needed to group multiple packages together, such as "orders-service", "driver-service"
+    - can have an inner structure if it's needed to group multiple packages together, such as "orders-service", "driver-service"
+
+- Makefiles with a minimum set of targets ([common-targets spec](https://github.com/flaviostutz/common-targets)) are one of the only common structures in the entire monorepo as it can acommodate most of the languages/diversity/stacks, even if being used only as a "proxy" to the actual tools.
+  - Each package has its own Makefile as the entry point for all it's operations during development/ci/deployment phases
+  - This makes things much more sane while the developer switches to different projects, regardless of the stack/tooling/language being used :)
 
 - The packages uses a common tooling, but they can also deviate if needed
   - It means that they might use different build, test, lint and deploy tools
   - This is important because when we are migrating to new stacks we should be able to migrate in phases, while handling diversity in parallel
-
-- Each package has its own Makefile as the entry point for all it's operations during development/ci/deployment phases (check [common-targets spec](https://github.com/flaviostutz/common-targets))
-  - This makes things much more sane while the developer switches to different projects, regardless of the stack/tooling/language being used :)
 
