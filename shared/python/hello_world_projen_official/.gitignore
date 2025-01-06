@@ -5,8 +5,8 @@ node_modules/
 !/.projen/deps.json
 !/.projen/files.json
 /.env
-!/requirements.txt
-!/requirements-dev.txt
+/requirements.txt
+/requirements-dev.txt
 __pycache__/
 *.py[cod]
 *$py.class

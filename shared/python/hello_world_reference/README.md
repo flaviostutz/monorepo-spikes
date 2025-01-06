@@ -2,6 +2,8 @@
 
 This project follows command standards in [common-targets](https://github.com/flaviostutz/common-targets).
 
+This is a project created in Python with a good set of tools and practices out there as in 01/2025.
+
 ## Developer commands
 
 ```

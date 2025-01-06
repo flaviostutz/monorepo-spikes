@@ -3,7 +3,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta" # If not defined, then legacy behavior can happen.
 
 [project]
-name = "hello_world"
+name = "hello_world_reference"
 version = "0.0.1"
 description = "Hello worlder is a simple package to print hello world"
 readme = "README.md"
